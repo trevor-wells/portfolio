@@ -159,7 +159,6 @@ export const getPostDetails = async (slug:string) => {
                 content {
                     raw
                 }
-                videoLink
             }
         }
     `
