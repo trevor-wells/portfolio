@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #201f1f;
+  --secondary: #a99b94;
+  --tertiary: #f7efe9;
+}
+
+.matrix {
+  --primary: black;
+  --secondary: rgb(0, 255, 0);
+  --tertiary: white;
+}
+
+* {
+  color: var(--secondary);
+}
+
 body {
-  background: black;
+  background: var(--primary);
 }

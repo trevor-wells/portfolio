@@ -1,29 +1,9 @@
 interface blogPostExcerpt {
     node: {
-        author: blogAuthor
         createdAt: string
         slug: string
         title: string
-        excerpt: string
-        featuredImage: {
-            url: string
-        }
-        categories: blogCategory[]
     }
-}
-
-interface blogAuthor {
-    bio?: string
-    name: string
-    id: string
-    photo: { 
-        url: string 
-    }
-}
-
-interface blogCategory {
-    name: string
-    slug: string
 }
 
 interface blogPostDetails {
@@ -47,14 +27,6 @@ interface blogPost {
     createdAt: string
     slug: string
     title: string
-    excerpt: string
-    featuredImage: {
-        url: string
-    }
-    categories: {
-        name: string
-        slug: string
-    }
     content: {
         raw: any
     }
@@ -63,7 +35,6 @@ interface blogPost {
 
 interface commentObj {
     name: string
-    email: string
     comment: string
     slug: string
 }
@@ -72,4 +43,9 @@ interface blogComment {
     name: string
     createdAt: string
     comment: string
+}
+
+interface project {
+    title: string
+    slug: string
 }

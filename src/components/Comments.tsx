@@ -17,17 +17,17 @@ export default function Comments({ slug }: { slug: string }) {
     return (
         <>
         { comments.length > 0 && (
-            <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
-            <h3 className="text-xl mb-8 font-semibold border-b pb-4">
-                { comments.length }{' '}Comment(s)
+            <div className="px-8 pb-12 mb-8">
+            <h3 className="text-xl mb-4 font-semibold">
+                { comments.length }{' '}{comments.length == 1 ? <>comment</> : <>comments</>}
             </h3>
             { comments.map((comment) => (
                 <div 
                 key={comment.createdAt}
-                className="border-b border-gray-100 mb-4 pb-4">
+                className="mb-4 pb-4">
                 <p className="mb-4">
                     <span className="font-semibold">
-                    {comment.name} {' '}on { moment(comment.createdAt).format('MMM DD, YYYY')}
+                    {comment.name} {' '}on { moment(comment.createdAt).format('MMM DD, YYYY').toLowerCase()}
                     </span>
                 </p>
                 <p className="whitespace-pre-line text-gray-600 w-full">

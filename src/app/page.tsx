@@ -1,24 +1,38 @@
-import PostCard from "@/components/PostCard"
-import PostWidget from "@/components/PostWidget"
-import Categories from "@/components/Categories"
-import { getPosts } from "@/services/graphql"
-
 export default async function Home() {
-  const posts:blogPostExcerpt[] = await getPosts()
-
   return (
     <main className="container mx-auto px-10 mb-8">
-      <title>CMS Blog</title>
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-        <div className='lg:col-span-8 col-span-1 bg-gray-800'>
-          {posts.map((post) => (<PostCard post={post} key={post.node.title}/>))}
-        </div>
-        <div className='lg:col-span-4 col-span-1'>
-            <div className='lg:sticky relative top-8 bg-gray-300'>
-              <PostWidget categories={[]} slug={''}/>
-              <Categories />
-            </div>
-        </div>
+      <title>trevorwells</title>
+      <h1 className="text-xl mb-32 text-center">a fullstack developer with a passion for creating unique digital experiences.</h1>
+      <h1 className="text-center mb-4 text-4xl">skills</h1>
+      <div className='mb-32 flex justify-between'>
+        <span>
+          <img></img>
+          <h1>html5</h1>
+        </span>
+        <span>
+          <img></img>
+          <h1>javascript</h1>
+        </span>
+        <span>
+          <img></img>
+          <h1>css</h1>
+        </span>
+        <span>
+          <img></img>
+          <h1>python</h1>
+        </span>
+        <span>
+          <img></img>
+          <h1>react.js</h1>
+        </span>
+        <span>
+          <img></img>
+          <h1>next.js</h1>
+        </span>
+        <span>
+          <img></img>
+          <h1>flask</h1>
+        </span>
       </div>
     </main>
   )

@@ -1,29 +1,33 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Special_Elite, VT323 } from 'next/font/google'
 import NavBar from '@/components/NavBar'
-import { getCategories } from '@/services/graphql'
+import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const special_elite = Special_Elite({
+  weight: '400',
+  subsets: ['latin'],
+})
+
+const vt323 = VT323({
+  weight: '400',
+  subsets: ['latin'],
+})
+
+const fonts = [special_elite.className, vt323.className]
 
 export const metadata: Metadata = {
-  title: 'Trevor Wells',
-  description: 'Trevor Wells\' portfolio',
+  title: 'trevorwells',
+  description: 'portfolio - trevor wells',
 }
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-
-  const categories = await getCategories()
-
+export default async function RootLayout({ children, }: { children: React.ReactNode}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <NavBar categories={categories} />
+    <html lang="en" className={special_elite.className}>
+      <body className='classic'>
+        <NavBar fonts={fonts} />
         {children}
+        <Footer />
       </body>
     </html>
   )
