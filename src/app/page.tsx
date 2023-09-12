@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default async function Home() {
   return (
     <main className="container mx-auto px-10 mb-8">
@@ -6,31 +8,59 @@ export default async function Home() {
       <h1 className="text-center mb-4 text-4xl">skills</h1>
       <div className='mb-32 flex justify-between'>
         <span>
-          <img></img>
+          <Image
+            src=''
+            alt=''
+          >
+          </Image>
           <h1>html5</h1>
         </span>
         <span>
-          <img></img>
+          <Image
+            src=''
+            alt=''
+          >
+          </Image>
           <h1>javascript</h1>
         </span>
         <span>
-          <img></img>
+          <Image
+            src=''
+            alt=''
+          >
+          </Image>
           <h1>css</h1>
         </span>
         <span>
-          <img></img>
+          <Image
+            src=''
+            alt=''
+          >
+          </Image>
           <h1>python</h1>
         </span>
         <span>
-          <img></img>
+          <Image
+            src=''
+            alt=''
+          >
+          </Image>
           <h1>react.js</h1>
         </span>
         <span>
-          <img></img>
+          <Image
+            src=''
+            alt=''
+          >
+          </Image>
           <h1>next.js</h1>
         </span>
         <span>
-          <img></img>
+          <Image
+            src=''
+            alt=''
+          >
+          </Image>
           <h1>flask</h1>
         </span>
       </div>

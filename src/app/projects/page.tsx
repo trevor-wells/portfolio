@@ -8,7 +8,7 @@ export default async function Project() {
     return (
     <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
         <div className='col-start-2 col-span-2'>
-            {projects.map(project => <ProjectCard project={project} />)}
+            {projects.map(project => <ProjectCard project={project} key={project.slug} />)}
         </div>
     </div>
     )

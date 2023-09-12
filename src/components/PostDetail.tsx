@@ -29,7 +29,7 @@ export default function PostDetail({ post }: {post:blogPost}) {
             return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item:any, i:number) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
           case 'image':
             return (
-              <img
+              <Image
                 key={index}
                 alt={obj.title}
                 height={obj.height}

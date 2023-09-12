@@ -19,7 +19,7 @@ export default function CommentsForm({ slug }: { slug: string}) {
             name: window.localStorage.getItem('name') || ""
         }
         )
-    },[])
+    },[formData])
 
     function handleChange(e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void {
         const {name, value} = e.currentTarget;

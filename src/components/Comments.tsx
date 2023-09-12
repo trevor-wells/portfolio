@@ -12,7 +12,7 @@ export default function Comments({ slug }: { slug: string }) {
     useEffect(() => {
         getComments(slug)
         .then(res => setComments(res))
-    },[])
+    },[slug])
 
     return (
         <>
