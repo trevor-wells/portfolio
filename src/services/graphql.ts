@@ -32,6 +32,7 @@ export const getPostDetails = async (slug:string) => {
                 content {
                     raw
                 }
+                videoLink?
             }
         }
     `
@@ -89,6 +90,11 @@ export const getProjectDetails = async (slug:string) => {
             project(where: { slug: $slug }) {
                 title
                 slug
+                createdAt
+                content {
+                    raw
+                }
+                videoLink
             }
         }
     `

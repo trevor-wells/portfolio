@@ -48,4 +48,9 @@ interface blogComment {
 interface project {
     title: string
     slug: string
+    createdAt: string
+    content: {
+        raw: any
+    }
+    videoLink?: string
 }
