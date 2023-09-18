@@ -86,7 +86,7 @@ export const getProjects = async () => {
 
 export const getProjectDetails = async (slug:string) => {
     const query = gql`
-        query GetProjectDetails($slug: String = "") {
+        query GetProjectDetails($slug: String!) {
             project(where: { slug: $slug }) {
                 title
                 slug
@@ -95,11 +95,29 @@ export const getProjectDetails = async (slug:string) => {
                     raw
                 }
                 videoLink
+                gitHubLink
             }
         }
     `
 
     const projectDetails:any = await request(graphqlAPI, query, {slug})
 
-    return projectDetails.project;
+    return projectDetails.project
+}
+
+export const getTechnologies = async (slug:string) => {
+    const query = gql`
+        query GetTechnologies($slug: String!) {
+            technologies(where: {projects_some: {Project: {slug: $slug}}}) {
+                name
+                icon {
+                    url
+                }
+            }
+        }
+    `
+
+    const results:any = await request(graphqlAPI, query, {slug})
+
+    return results.technologies
 }

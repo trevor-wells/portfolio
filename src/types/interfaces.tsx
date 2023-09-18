@@ -53,4 +53,12 @@ interface project {
         raw: any
     }
     videoLink?: string
+    gitHubLink: string
+}
+
+interface technology {
+    name: string
+    icon: {
+        url: string
+    }
 }
